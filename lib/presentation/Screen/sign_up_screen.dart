@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/core/const/TextApp.dart';
 import 'package:noteapp/core/theme/colorManiger.dart';
+import 'package:noteapp/presentation/widget/text_form_feild_app.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  SignUpScreen({super.key});
+  TextEditingController passController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,17 +39,11 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: TextFormField(
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    fillColor: ColorManager.boxtextform,
-                    filled: true,
-                    border: InputBorder.none,
-                    hintText: TextApp.hitTextGM,
-                  ),
-                ),
+
+              /// Text form feild for Email
+              TextFormFeildApp(
+                controller: passController,
+                hinTxt: TextApp.email,
               ),
             ],
           ),
