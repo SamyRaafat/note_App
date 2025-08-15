@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/core/const/TextApp.dart';
 import 'package:noteapp/core/theme/colorManiger.dart';
+import 'package:noteapp/presentation/widget/custom_botton_widget.dart';
+import 'package:noteapp/presentation/widget/page_name.dart';
 import 'package:noteapp/presentation/widget/text_form_feild_app.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -18,33 +20,24 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Text(
-                  TextApp.CreateNewAccount,
-                  style: TextStyle(
-                    color: ColorManager.WhiteApp,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 24,
-                  ),
-                ),
-              ),
-              SizedBox(height: 15),
-              Text(
-                textAlign: TextAlign.start,
-                TextApp.email,
-                style: TextStyle(
-                  color: ColorManager.WhiteApp,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                ),
-              ),
-              SizedBox(height: 15),
+              /// page name screen
+              PageName(pageNameScreen: TextApp.pageNameCreateNewAccount),
 
-              /// Text form feild for Email
-              TextFormFeildApp(
-                controller: passController,
-                hinTxt: TextApp.email,
+              /// Text form field for Email
+              TextFormFieldApp(
+                controller: emailController,
+                hinTxt: TextApp.hitTextGmail,
+                nameTFF: TextApp.email,
               ),
+
+              /// Text form field for Password
+              TextFormFieldApp(
+                controller: passController,
+                hinTxt: TextApp.hitTextPassword,
+                nameTFF: TextApp.pass,
+              ),
+              SizedBox(height: 15),
+              CustomBottonWidget(text: TextApp.navNameSignUp),
             ],
           ),
         ),
