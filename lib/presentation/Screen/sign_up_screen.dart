@@ -37,7 +37,24 @@ class SignUpScreen extends StatelessWidget {
                 nameTFF: TextApp.pass,
               ),
               SizedBox(height: 15),
-              CustomBottonWidget(text: TextApp.navNameSignUp),
+              Spacer(),
+              Center(
+                child: Container(
+                  width: 312,
+                  height: 48,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Center(
+                    child: Text(
+                      TextApp.navNameSignUp,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 50),
             ],
           ),
         ),

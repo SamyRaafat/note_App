@@ -6,17 +6,65 @@ import 'package:noteapp/presentation/widget/page_name.dart';
 import 'package:noteapp/presentation/widget/text_form_feild_app.dart';
 
 class HiWelcomeBack extends StatelessWidget {
-  const HiWelcomeBack({super.key});
+  HiWelcomeBack({super.key});
+  TextEditingController passController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: ColorManager.backGApp,
-        body: Column(
+    return Scaffold(
+      backgroundColor: ColorManager.backGApp,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 36),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 16),
+            /// page name screen
             PageName(pageNameScreen: TextApp.pageNamehiWelcomeBack),
+
+            /// Text form field for Email
+            TextFormFieldApp(
+              controller: emailController,
+              hinTxt: TextApp.hitTextGmail,
+              nameTFF: TextApp.email,
+            ),
+
+            /// Text form field for Password
+            TextFormFieldApp(
+              controller: passController,
+              hinTxt: TextApp.hitTextPassword,
+              nameTFF: TextApp.pass,
+            ),
+            SizedBox(height: 15),
+            Spacer(),
+            Center(
+              child: Container(
+                width: 312,
+                height: 48,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Center(
+                  child: Text(
+                    TextApp.navNameLogin,
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            Center(
+              child: Container(
+                width: 312,
+                height: 48,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Center(
+                  child: Text(
+                    TextApp.navNameConWitGo,
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 50),
           ],
         ),
       ),

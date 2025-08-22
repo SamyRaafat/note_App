@@ -1,0 +1,29 @@
+ {
+  "project_info": {
+    "project_number": "222091962719",
+    "project_id": "noteapp-cdf52",
+    "storage_bucket": "noteapp-cdf52.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222091962719:android:0cd2437c2c143993416eea",
+        "android_client_info": {
+          "package_name": "com.example.noteapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn19dFnZ_8I4PNbidosqdUmkD7s7tcRQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

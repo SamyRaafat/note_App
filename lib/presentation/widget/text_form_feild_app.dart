@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/core/const/TextApp.dart';
 import 'package:noteapp/core/theme/colorManiger.dart';
 
 class TextFormFieldApp extends StatefulWidget {

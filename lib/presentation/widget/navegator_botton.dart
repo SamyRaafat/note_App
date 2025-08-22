@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 
 class NavegatorBoton extends StatefulWidget {
   double? width;
-  double? height;
-  double? circular;
-  String? navNaSiUp;
+  double height;
+  String navNaSiUp;
 
   NavegatorBoton({
     super.key,
-    this.navNaSiUp,
-    this.circular,
-    this.height,
+    required this.navNaSiUp,
+    required this.height,
     this.width,
   });
 
@@ -32,7 +30,7 @@ class _NavegatorBotonState extends State<NavegatorBoton> {
                 height: widget.height,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(widget.circular),
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
               Text(widget.navNaSiUp),

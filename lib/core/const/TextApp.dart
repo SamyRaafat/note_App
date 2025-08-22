@@ -24,4 +24,7 @@ class TextApp {
   static String navNameConWitGo = ("Continue With Google");
   static String navNameSelectMedia = ("Select Media");
   static String navNameCreate = ("Create");
+
+  /// End text in page
+  static String endTextDonthaveanaccount = ("Don’t have an account ? ");
 }
