@@ -2,11 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noteapp/logic/login/state.dart';
 
-class LoginCubit extends Cubit<LoginStates> {
-  LoginCubit() : super(LoginInitialStates());
+class LoginCubit extends Cubit<loginStates> {
+  LoginCubit() : super(loginInitialStates());
 
   Future login(String userEmail, String userPass) async {
-    emit(LoginLoadingStates());
+    emit(loginLoadingStates());
 
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -14,9 +14,9 @@ class LoginCubit extends Cubit<LoginStates> {
         password: userPass,
       );
       email:
-      (LoginSuccessStates());
+      (loginSuccessStates());
     } catch (e) {
-      emit(LoginErrorStates(em: e.toString()));
+      emit(loginErrorStates(em: e.toString()));
     }
   }
 }

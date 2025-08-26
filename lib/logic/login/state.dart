@@ -1,12 +1,12 @@
-class LoginStates {}
+class loginStates {}
 
-class LoginInitialStates extends LoginStates {}
+class loginInitialStates extends loginStates {}
 
-class LoginLoadingStates extends LoginStates {}
+class loginLoadingStates extends loginStates {}
 
-class LoginSuccessStates extends LoginStates {}
+class loginSuccessStates extends loginStates {}
 
-class LoginErrorStates extends LoginStates {
+class loginErrorStates extends loginStates {
   final String em;
-  LoginErrorStates({required this.em});
+  loginErrorStates({required this.em});
 }

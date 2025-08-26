@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:noteapp/presentation/Screen/add_note.dart';
 import 'package:noteapp/presentation/Screen/create_new_note.dart';
-import 'package:noteapp/presentation/Screen/hi_welcome_back.dart';
+import 'package:noteapp/presentation/Screen/home_page.dart';
+import 'package:noteapp/presentation/Screen/login.dart';
 import 'package:noteapp/presentation/Screen/sign_up_screen.dart';
 
 void main() async {
@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: AddNote());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
   }
 }

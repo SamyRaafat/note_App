@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noteapp/core/const/TextApp.dart';
 import 'package:noteapp/core/theme/colorManiger.dart';
+import 'package:noteapp/presentation/Screen/sign_up_screen.dart';
 import 'package:noteapp/presentation/widget/page_name.dart';
 import 'package:noteapp/presentation/widget/text_form_feild_app.dart';
 
-class HiWelcomeBack extends StatelessWidget {
-  HiWelcomeBack({super.key});
+class Login extends StatelessWidget {
+  Login({super.key});
   TextEditingController passController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
@@ -65,6 +66,30 @@ class HiWelcomeBack extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  TextApp.endTextDonthaveanaccount,
+                  style: TextStyle(color: ColorManager.WhiteApp),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpScreen()),
+                    );
+                  },
+                  child: Text(
+                    TextApp.endTextsinup,
+                    style: TextStyle(color: ColorManager.WhiteApp),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 5),
+
+            SizedBox(height: 30),
           ],
         ),
       ),

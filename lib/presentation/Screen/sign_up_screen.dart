@@ -38,6 +38,8 @@ class SignUpScreen extends StatelessWidget {
               ),
               SizedBox(height: 15),
               Spacer(),
+
+              /// Sign up Botton
               Center(
                 child: Container(
                   width: 312,

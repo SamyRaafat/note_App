@@ -14,7 +14,7 @@ class TextApp {
   static String email = ("Email");
   static String pass = ("Password");
   static String headline = ("Head line");
-  static String Description = ("Enter Your Description");
+  static String description = ("Description");
 
   /// navegator name boton
   static String navNameLogin = ("Login");
@@ -27,4 +27,5 @@ class TextApp {
 
   /// End text in page
   static String endTextDonthaveanaccount = ("Don’t have an account ? ");
+  static String endTextsinup = ("Sign Up");
 }

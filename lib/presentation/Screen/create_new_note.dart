@@ -26,8 +26,37 @@ class CreateNewNote extends StatelessWidget {
             TextFormFieldApp(
               controller: DescriptionControler,
               hinTxt: TextApp.hitTextEnterYourDescription,
-              nameTFF: TextApp.Description,
+              nameTFF: TextApp.description,
             ),
+            Spacer(),
+            Center(
+              child: Container(
+                width: 312,
+                height: 48,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Center(
+                  child: Text(
+                    TextApp.navNameSelectMedia,
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            Center(
+              child: Container(
+                width: 312,
+                height: 48,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Center(
+                  child: Text(
+                    TextApp.navNameCreate,
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 50),
           ],
         ),
       ),

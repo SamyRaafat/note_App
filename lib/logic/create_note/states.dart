@@ -7,6 +7,6 @@ class CreateNoteLoadingState extends CreateNoteStates {}
 class CreateNoteSuccessState extends CreateNoteStates {}
 
 class CreateNoteErrorState extends CreateNoteStates {
-  final String errorMessage;
-  CreateNoteErrorState({required this.errorMessage});
+  final String em;
+  CreateNoteErrorState({required this.em});
 }
